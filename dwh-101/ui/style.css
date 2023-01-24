@@ -1,0 +1,20 @@
+button {
+  width: 7%;
+}
+
+button:active:after {
+  content: "👌";
+}
+
+
+li {
+	font-size: 200%
+}
+
+main[data-theme="light"] {
+	background-color: azure;
+}
+
+main[data-theme="light"] span {
+	color: black;
+}

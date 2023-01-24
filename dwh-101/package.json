@@ -34,7 +34,7 @@
 		},
 		"rules": {},
 		"globals": {
-			"l": true
+			"document": true
 		},
 		"ignorePatterns": ["**/tests/*"]
 	}

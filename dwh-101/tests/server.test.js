@@ -15,6 +15,26 @@ describe('do routes work?', () => {
 		expect(content.toString().startsWith(`<!DOCTYPE html>`)).toBe(true)
 	})
 
+	test('/style.css', async ()=>{
+		const {statusCode, contentType, content} = await routes('/style.css')
+		expect(statusCode).toBe(200)
+		expect(contentType).toBe('text/css')
+	})
+
+	test('/interactivity.js', async ()=>{
+		const {statusCode, contentType, content} = await routes('/interactivity.js')
+		expect(statusCode).toBe(200)
+		expect(contentType).toBe('text/javascript')
+	})
+
+	test('/favicon.ico', async ()=>{
+		const {statusCode, contentType, content} = await routes('/favicon.ico')
+		expect(statusCode).toBe(200)
+		expect(contentType).toBe('image/x-icon')
+		
+	})
+	
+
 	test('/api', async () => {
 		const fakeData = {foo: 'bar'}
 		const {statusCode, contentType, content} = await routes('/api', null, null, fakeData)

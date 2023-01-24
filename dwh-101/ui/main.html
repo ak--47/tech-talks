@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
 	<title>the joke teller!</title>
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-	
+	<main data-theme="dark">
+		<section class="container">
+			<p>tell me a joke:</p>
+			<input type="text" id="user-content">
+			<button class="outline" id="send">plz</button>
+		</section>
+
+		<section class="container">
+			<p>or... i'll tell you a joke:</p>
+			<button class="outline" id="suggest">plz</button>
+			<fieldset id="toggles">
+				<div class="grid">
+					<div>
+						<input type="checkbox" role="switch" id="dark" checked="checked" />
+						<span>dark</span>
+					</div>
+					<div>
+						<input type="checkbox" role="switch" id="rrated" />
+						<span>G</span>
+					</div>
+					<div>
+						<input type="checkbox" role="switch" id="emoji" />
+						<span>no emoji</span>
+					</div>
+					<div>
+						<input type="checkbox" role="switch" id="long" />
+						<span>short form</span>
+					</div>
+
+				</div>
+			</fieldset>
+
+		</section>
+		<section class="container">
+			<ul id="jokes">
+				<li>foo</li>
+			</ul>
+		</section>
+	</main>
+	<script src="./interactivity.js"></script>
 </body>
+
 </html>

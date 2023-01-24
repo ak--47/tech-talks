@@ -48,6 +48,26 @@ export async function routes(url, method, headers, body) {
 		content = await fs.readFile(path.resolve("./ui/main.html"));
 	}
 
+	//serving CSS
+	if (url === '/style.css') {
+		statusCode = 200;
+		contentType = 'text/css';
+		content = await fs.readFile(path.resolve('./ui/style.css'));
+	}
+
+	if (url === '/normalize.css') {
+		statusCode = 200;
+		contentType = 'text/css';
+		content = await fs.readFile(path.resolve('./ui/normalize.css'));
+	}
+
+	//serving JAVASCRIPT
+	if (url === '/interactivity.js') {
+		statusCode = 200;
+		contentType = 'text/javascript';
+		content = await fs.readFile(path.resolve('./ui/interactivity.js'));
+	}
+
 	//serving JSON
 	if (url === '/api') {
 		statusCode = 200;
@@ -55,6 +75,13 @@ export async function routes(url, method, headers, body) {
 		contentType = 'application/json';
 		content = u.json(apiData);
 
+	}
+
+	//serving icons
+	if (url === '/favicon.ico') {
+		statusCode = 200;
+		contentType = 'image/x-icon';
+		content = await fs.readFile(path.resolve('./ui/favicon.ico'));
 	}
 
 	//serving TEXT
