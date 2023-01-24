@@ -34,6 +34,18 @@ describe('do routes work?', () => {
 		
 	})
 	
+	test('/tell-joke', async () => { 
+		const {statusCode, contentType, content} = await routes('/tell-joke', 'POST', null, {})
+		const joke = JSON.parse(content)
+		expect(statusCode).toBe(200)
+		expect(contentType).toBe('application/json')
+		expect(joke.text.length).toBeGreaterThan(1)
+		expect(joke.rating).toBe('G')
+		expect(joke.dark).toBe(true)
+		expect(joke.long).toBe(false)
+		expect(joke.vibe).toBe('positive')
+		
+	})
 
 	test('/api', async () => {
 		const fakeData = {foo: 'bar'}
@@ -59,4 +71,6 @@ describe('do routes work?', () => {
 		expect(content.includes('❌')).toBe(true)
 		
 	})
+
+
 })

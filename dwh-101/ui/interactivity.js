@@ -1,13 +1,15 @@
 console.log('\n\t\tthe app hath loaded!\n\n');
+
 // shortcuts
 const qs = document.querySelector.bind(document);
 const qsa = document.querySelectorAll.bind(document);
 const log = console.log;
 
+// main
 const app = {
 	init: function () {
 		this.cacheDOM();
-		this.interactivity();
+		this.bindInteractions();
 	},
 
 
@@ -24,7 +26,8 @@ const app = {
 		return elements;
 	},
 	DOM: {},
-	interactivity: function () {
+	
+	bindInteractions: function () {
 		this.DOM.sendJokeButton.addEventListener('click', () => { this.sendJoke(); });
 		this.DOM.getJokeButton.addEventListener('click', () => { this.getJoke(); });
 		this.DOM.toggles.forEach(element => {
@@ -41,7 +44,7 @@ const app = {
 
 		const labels = {
 			dark: ['light', 'dark'],
-			rrated: ['G', 'R'],
+			vibe: ['positive', 'cynical'],
 			emoji: ['yes emoji', 'no emoji'],
 			long: ['short form', 'long form']
 
@@ -66,7 +69,7 @@ const app = {
 };
 
 
-
+//bootstrap
 app.init(); // 😎
 
 
