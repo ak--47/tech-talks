@@ -1,20 +1,57 @@
 button {
-  width: 7%;
+  width: 90px;
 }
 
 button:active:after {
   content: "👌";
 }
 
-
 li {
-	font-size: 200%
+  font-size: 120%;
+  line-height: 26px;
 }
 
 main[data-theme="light"] {
-	background-color: azure;
+  background-color: azure;
 }
 
 main[data-theme="light"] span {
-	color: black;
+  color: black;
+}
+
+#apiVersion {
+  width: 50%;
+}
+
+#versionLabel {
+  color: var(--primary);
+}
+
+#clearJokes {
+  float: right;
+  clear: right;
+}
+
+.right {
+  display: inline-block;
+}
+
+.ratings {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.ratings span {
+  padding-left: 10px;
+  font-size: 40px;
+  opacity: 0.5;
+}
+
+.ratings span:hover {
+  opacity: 1;
+}
+
+.ratings span:active {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }

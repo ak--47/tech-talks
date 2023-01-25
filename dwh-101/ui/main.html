@@ -10,12 +10,14 @@
 
 <body>
 	<main data-theme="dark">
+		<!-- JOKE INPUT -->
 		<section class="container">
 			<p>tell me a joke:</p>
 			<input type="text" id="user-content">
 			<button class="outline" id="send">plz</button>
 		</section>
 
+		<!-- JOKE OUTPUT -->
 		<section class="container">
 			<p>or... i'll tell you a joke:</p>
 			<button class="outline" id="suggest">tks</button>
@@ -39,15 +41,36 @@
 					</div>
 
 				</div>
-			</fieldset>
-
+			</fieldset>			
 		</section>
+
+		<!-- JOKES -->
 		<section class="container">
 			<ul id="jokes">
-				
+
 			</ul>
+			<div class="container right">
+				<button class="secondary" id="clearJokes" disabled>clear</button>
+			</div>
+
+		</section>
+		<section class="container" id="apiVersion">
+			<input type="range" min="1" max="3" value="1" class="slider" id="version" /> API version <span
+				id="versionLabel">1</span>
 		</section>
 	</main>
+
+	<!-- TEMPLATES -->
+	<template id="ratingTemplate">
+		<div class="ratings">
+			<span>👍</span>
+			<span>👎</span>
+			<span>😹</span>
+			<span>😾</span>
+		</div>
+	</template>
+
+	<!-- JS -->
 	<script src="./interactivity.js"></script>
 </body>
 
