@@ -1,0 +1,45 @@
+{
+  "name": "pseudo-database",
+  "version": "1.0.0",
+  "description": "a pseudo database example",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+	"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "type": "module",
+  "author": "AK",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "jest": "^29.4.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ak-tools": "^1.0.215"
+  },
+  "eslintConfig": {
+	"env": {
+		"browser": false,
+		"node": true,
+		"commonjs": true,
+		"es2021": true
+	},
+	"extends": "eslint:recommended",
+	"overrides": [],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"rules": {},
+	"globals": {
+		"document": true
+	},
+	"ignorePatterns": ["**/tests/*"]
+},
+"cspell": {
+	"version": "0.2",
+	"useGitignore": true,
+	"ignorePaths": ["./storage/*"]
+  }
+}

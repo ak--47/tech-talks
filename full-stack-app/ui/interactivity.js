@@ -12,7 +12,6 @@ const app = {
 		this.bindInteractions();
 	},
 
-
 	cacheDOM: function () {
 		const elements = {
 			main: qs('main'),
@@ -89,7 +88,6 @@ const app = {
 	updateSlider: function () {
 		this.DOM.versionLabel.textContent = this.DOM.versionSlider.value;
 	},
-
 
 	getJoke: async function () {
 		log('get joke');

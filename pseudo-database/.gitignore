@@ -1,0 +1,18 @@
+# ignore this shit
+*.ndjson
+*.gz
+scratchpad.js
+scratch.js
+.vscode/*
+.DS_Store
+.env
+.envBAK
+node_modules/
+testData/*
+!testData/.gitkeep
+mixpanel-exports/*
+!mixpanel-exports/.gitkeep
+logs/*
+!logs/.gitkeep
+test.js
+quick.js
